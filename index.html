@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Player</title>
-  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
-  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+  <!-- ... -->
 </head>
 <body>
   <div class="video-container">
@@ -13,7 +9,19 @@
       <!-- The video source will be added programmatically -->
     </video>
     <div class="options">
-      <!-- Additional options (e.g., audio tracks and subtitles) will be added here -->
+      <form id="video-form">
+        <label for="video-url">Video URL:</label>
+        <input type="text" id="video-url" required>
+        <button type="submit">Load Video</button>
+      </form>
+      <div>
+        <label for="audio-tracks">Audio Tracks:</label>
+        <select id="audio-tracks"></select>
+      </div>
+      <div>
+        <label for="subtitle-tracks">Subtitles:</label>
+        <select id="subtitle-tracks"></select>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
